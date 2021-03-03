@@ -1,0 +1,5 @@
+Manifest-Version: 3.0
+Created-By: Tomas Sezaro
+Main-Class: BienvenidaV3
+X-COMMENT: mi proyecto de Java
+

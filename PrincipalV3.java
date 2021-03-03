@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class PrincipalV2 extends JFrame implements ActionListener{
+public class PrincipalV3 extends JFrame implements ActionListener{
 
 	private JMenuBar menubar;
 	private JMenu menuOpciones;
@@ -36,15 +36,15 @@ public class PrincipalV2 extends JFrame implements ActionListener{
 
 
 
-	public PrincipalV2(){
+	public PrincipalV3(){
 
 		setLayout(null);
-
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setTitle("Pantalla Principal");
 		getContentPane().setBackground(new Color(255,255,0));
 		setIconImage(new ImageIcon(getClass().getResource("images/logo3.jpg")).getImage());
 
-		BienvenidaV2 variableBienvenidaa = new BienvenidaV2();
+		BienvenidaV3 variableBienvenidaa = new BienvenidaV3();
 		nombree = variableBienvenidaa.texto;
 
 		menubar = new JMenuBar();
@@ -601,11 +601,11 @@ public class PrincipalV2 extends JFrame implements ActionListener{
 
 		if(e.getSource() == miSalir){
 			
-			BienvenidaV2 ventanabievenidaV2 = new BienvenidaV2();
-			ventanabievenidaV2.setBounds(0,0,370,450);
-			ventanabievenidaV2.setVisible(true);
-			ventanabievenidaV2.setResizable(false);
-			ventanabievenidaV2.setLocationRelativeTo(null);
+			BienvenidaV3 ventanabievenidaV3 = new BienvenidaV3();
+			ventanabievenidaV3.setBounds(0,0,370,450);
+			ventanabievenidaV3.setVisible(true);
+			ventanabievenidaV3.setResizable(false);
+			ventanabievenidaV3.setLocationRelativeTo(null);
 			this.setVisible(false);
 
 		}
@@ -623,11 +623,11 @@ public class PrincipalV2 extends JFrame implements ActionListener{
 
 	public static void main(String args[]){
 
-		PrincipalV2 ventanaPrincipalV2 = new PrincipalV2();
-		ventanaPrincipalV2.setBounds(0,0,640,535);
-		ventanaPrincipalV2.setVisible(true);
-		ventanaPrincipalV2.setResizable(false);
-		ventanaPrincipalV2.setLocationRelativeTo(null);
+		PrincipalV3 ventanaPrincipalV3 = new PrincipalV3();
+		ventanaPrincipalV3.setBounds(0,0,640,535);
+		ventanaPrincipalV3.setVisible(true);
+		ventanaPrincipalV3.setResizable(false);
+		ventanaPrincipalV3.setLocationRelativeTo(null);
 
 	}
 

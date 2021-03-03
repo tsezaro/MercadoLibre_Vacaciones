@@ -3,7 +3,7 @@ import javax.swing.event.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class TerminosV2 extends JFrame implements ActionListener, ChangeListener{
+public class TerminosV3 extends JFrame implements ActionListener, ChangeListener{
 
 	private JLabel label1;
 	private JLabel label2;
@@ -17,13 +17,13 @@ public class TerminosV2 extends JFrame implements ActionListener, ChangeListener
 
 
 
-	public TerminosV2(){
+	public TerminosV3(){
 
 		setLayout(null);
-
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setTitle("Licencia de uso");
 		setIconImage(new ImageIcon(getClass().getResource("images/logo3.jpg")).getImage());
-		BienvenidaV2 variableBienvenida = new BienvenidaV2();
+		BienvenidaV3 variableBienvenida = new BienvenidaV3();
 		nombre = variableBienvenida.texto;
 
 		label1 = new JLabel ("TERMINOS Y CONDICIONES");
@@ -125,22 +125,22 @@ public class TerminosV2 extends JFrame implements ActionListener, ChangeListener
 
 		if(e.getSource() == boton1){
 
-			PrincipalV2 ventanaPrincipalV2 = new PrincipalV2();
-			ventanaPrincipalV2.setBounds(0,0,640,535);
-			ventanaPrincipalV2.setVisible(true);
-			ventanaPrincipalV2.setResizable(false);
-			ventanaPrincipalV2.setLocationRelativeTo(null);
+			PrincipalV3 ventanaPrincipalV3 = new PrincipalV3();
+			ventanaPrincipalV3.setBounds(0,0,640,535);
+			ventanaPrincipalV3.setVisible(true);
+			ventanaPrincipalV3.setResizable(false);
+			ventanaPrincipalV3.setLocationRelativeTo(null);
 			this.setVisible(false);
 
 		}
 		else 
 			if(e.getSource() == boton2){
 
-				BienvenidaV2 ventanabievenidaV2 = new BienvenidaV2();
-				ventanabievenidaV2.setBounds(0,0,370,450);
-				ventanabievenidaV2.setVisible(true);
-				ventanabievenidaV2.setResizable(false);
-				ventanabievenidaV2.setLocationRelativeTo(null);
+				BienvenidaV3 ventanabievenidaV3 = new BienvenidaV3();
+				ventanabievenidaV3.setBounds(0,0,370,450);
+				ventanabievenidaV3.setVisible(true);
+				ventanabievenidaV3.setResizable(false);
+				ventanabievenidaV3.setLocationRelativeTo(null);
 				this.setVisible(false);
 		}
 
@@ -151,11 +151,11 @@ public class TerminosV2 extends JFrame implements ActionListener, ChangeListener
 
 	public static void main(String args[]){
 
-		TerminosV2 ventanaterminosV2 = new TerminosV2();
-		ventanaterminosV2.setBounds(0,0,610,460);
-		ventanaterminosV2.setVisible(true);
-		ventanaterminosV2.setResizable(false);
-		ventanaterminosV2.setLocationRelativeTo(null);
+		TerminosV3 ventanaterminosV3 = new TerminosV3();
+		ventanaterminosV3.setBounds(0,0,610,460);
+		ventanaterminosV3.setVisible(true);
+		ventanaterminosV3.setResizable(false);
+		ventanaterminosV3.setLocationRelativeTo(null);
 
 	}
 

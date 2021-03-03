@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class BienvenidaV2 extends JFrame implements ActionListener{
+public class BienvenidaV3 extends JFrame implements ActionListener{
 
 	private JTextField textfield1;
 	private JLabel label1;
@@ -16,10 +16,10 @@ public class BienvenidaV2 extends JFrame implements ActionListener{
 
 
 
-	public BienvenidaV2(){
+	public BienvenidaV3(){
 
 		setLayout(null);
-
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setTitle("Bienvenido a Mercado Libre.");
 		getContentPane().setBackground(new Color(255,255,0));
 		setIconImage(new ImageIcon(getClass().getResource("images/logo3.jpg")).getImage());
@@ -92,11 +92,11 @@ public class BienvenidaV2 extends JFrame implements ActionListener{
 			}
 			else{
 
-				TerminosV2 ventanaterminosV2 = new TerminosV2();
-				ventanaterminosV2.setBounds(0,0,610,460);
-				ventanaterminosV2.setVisible(true);
-				ventanaterminosV2.setResizable(false);
-				ventanaterminosV2.setLocationRelativeTo(null);
+				TerminosV3 ventanaterminosV3 = new TerminosV3();
+				ventanaterminosV3.setBounds(0,0,610,460);
+				ventanaterminosV3.setVisible(true);
+				ventanaterminosV3.setResizable(false);
+				ventanaterminosV3.setLocationRelativeTo(null);
 				this.setVisible(false);
 
 			}
@@ -110,11 +110,11 @@ public class BienvenidaV2 extends JFrame implements ActionListener{
 
 	public static void main(String args[]){
 
-		BienvenidaV2 ventanabievenidaV2 = new BienvenidaV2();
-		ventanabievenidaV2.setBounds(0,0,370,450);
-		ventanabievenidaV2.setVisible(true);
-		ventanabievenidaV2.setResizable(false);
-		ventanabievenidaV2.setLocationRelativeTo(null);
+		BienvenidaV3 ventanabievenidaV3 = new BienvenidaV3();
+		ventanabievenidaV3.setBounds(0,0,370,450);
+		ventanabievenidaV3.setVisible(true);
+		ventanabievenidaV3.setResizable(false);
+		ventanabievenidaV3.setLocationRelativeTo(null);
 
 	}
 
