@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Bienvenida extends JFrame implements ActionListener{
+public class BienvenidaV2 extends JFrame implements ActionListener{
 
 	private JTextField textfield1;
 	private JLabel label1;
@@ -12,9 +12,11 @@ public class Bienvenida extends JFrame implements ActionListener{
 	private JLabel label5;
 	private JButton boton1;
 
+	public static String texto = "";
 
 
-	public Bienvenida(){
+
+	public BienvenidaV2(){
 
 		setLayout(null);
 
@@ -62,7 +64,7 @@ public class Bienvenida extends JFrame implements ActionListener{
 		textfield1.setBounds(45,240,255,25);
 		textfield1.setBackground(new Color(224,224,224));
 		textfield1.setFont(new Font("Arial", 1, 12));
-		textfield1.setForeground(new Color(0,0,0));
+		textfield1.setForeground(new Color(106,90,255));
 		add(textfield1);
 
 
@@ -79,6 +81,27 @@ public class Bienvenida extends JFrame implements ActionListener{
 
 	public void actionPerformed(ActionEvent e){
 
+		if(e.getSource() == boton1){
+
+			texto = textfield1.getText().trim();
+
+			if(texto.equals("")){
+				
+				JOptionPane.showMessageDialog(null, "Debe ingresar su nombre.");
+
+			}
+			else{
+
+				TerminosV2 ventanaterminosV2 = new TerminosV2();
+				ventanaterminosV2.setBounds(0,0,610,460);
+				ventanaterminosV2.setVisible(true);
+				ventanaterminosV2.setResizable(false);
+				ventanaterminosV2.setLocationRelativeTo(null);
+				this.setVisible(false);
+
+			}
+
+		}
 
 	}
 
@@ -87,11 +110,11 @@ public class Bienvenida extends JFrame implements ActionListener{
 
 	public static void main(String args[]){
 
-		Bienvenida ventanabievenida = new Bienvenida();
-		ventanabievenida.setBounds(0,0,370,450);
-		ventanabievenida.setVisible(true);
-		ventanabievenida.setResizable(false);
-		ventanabievenida.setLocationRelativeTo(null);
+		BienvenidaV2 ventanabievenidaV2 = new BienvenidaV2();
+		ventanabievenidaV2.setBounds(0,0,370,450);
+		ventanabievenidaV2.setVisible(true);
+		ventanabievenidaV2.setResizable(false);
+		ventanabievenidaV2.setLocationRelativeTo(null);
 
 	}
 
